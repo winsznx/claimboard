@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "forge-std/Script.sol";
-import "../src/ChainRegistry.sol";
+import "../src/Uclaimboard.sol";
 
 contract DeployScript is Script {
     function run() external {
@@ -10,9 +10,9 @@ contract DeployScript is Script {
         
         vm.startBroadcast(deployerPrivateKey);
         
-        ChainRegistry registry = new ChainRegistry();
+        Uclaimboard registry = new Uclaimboard();
         
-        console.log("ChainRegistry deployed to:", address(registry));
+        console.log("Uclaimboard deployed to:", address(registry));
         
         vm.stopBroadcast();
     }
